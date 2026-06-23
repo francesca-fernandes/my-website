@@ -1,65 +1,97 @@
 import Image from "next/image";
+import Link from "next/link";
+import AboutSlideshow from "@/components/AboutSlideshow";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="mx-auto max-w-5xl px-4 md:px-6 py-4 md:py-10">
+      <h1 className="text-3xl md:text-5xl tracking-tight text-foreground">
+        <span className="underline underline-offset-6 decoration-1"> about </span>
+      </h1>
+
+      <div className="mt-6 md:mt-10 flex flex-col md:flex-row md:gap-10 items-stretch">
+
+
+
+        {/* TEXT */}
+        <div className="w-full md:w-2/3 max-w-prose space-y-3 md:space-y-4 body-text text-text">
+
+          <p>hi!</p>
+
+          <p>i&apos;m francesca! </p>
+
+          <p>
+            i&apos;m a {" "}
+            <span className="highlight">
+              first-year physics phd @ caltech
+            </span>, interested in the intersections between <span className="highlight">
+              high-energy theory
+            </span> (hep-th) and {" "}
+            <span className="highlight">
+              mathematical physics
+            </span> (math-ph).
           </p>
+
+          <p>
+            previously, i was a rhodes scholar @ oxford, and obtained my bachelor's w/ honors in
+            physics—and a minor in mathematics—from stanford. i completed my {" "}
+            <a
+              href="https://purl.stanford.edu/dg037gs2713"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 decoration-1"
+            >
+              honors thesis
+
+            </a> {" "}
+
+            under prof.
+            lance dixon (slac, hep-th), and have also been fortunate to work w/ {" "}
+
+            <a
+              href="https://www.sciencedirect.com/science/article/abs/pii/S0393044025001524"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 decoration-1"
+            >
+              matilde marcolli (caltech, math-ph)
+
+            </a>,
+            hideo mabuchi (stanford, quantum engineering), and susan clark (stanford, astrophysics).
+          </p>
+
+          <p>
+            i am deeply passionate about <span className="highlight">expanding representation within physics and mathematics</span>.
+          </p>
+
+          <p>
+            outside physics, i enjoy performing (singing, dancing, acting, stand-up comedy),{" "}
+            <a
+              href="https://notesfromababytheorist.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 decoration-1"
+            >
+              writing
+
+            </a>, <a
+              href="https://www.goodreads.com/user/show/21552614-francesca-fernandes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 decoration-1"
+            >
+              reading
+
+            </a>, and hosting.
+          </p>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+
+        <AboutSlideshow />
+
+      </div>
     </div>
   );
 }
+
+
