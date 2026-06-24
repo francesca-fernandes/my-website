@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Spectral, EB_Garamond } from "next/font/google";
+import { Spectral, EB_Garamond, } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     template: "%s | francesca fernandes",
   },
   description: "Personal site of Francesca Fernandes.",
+  icons: {
+    icon: "/ff.png",
+  },
 };
 
 export default function RootLayout({
@@ -42,3 +45,4 @@ export default function RootLayout({
     </html>
   );
 }
+
